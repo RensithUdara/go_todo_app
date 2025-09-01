@@ -6,9 +6,10 @@ interface TodoItemProps {
   todo: Todo;
   toggleTodo: (id: string) => Promise<void>;
   deleteTodo: (id: string) => Promise<void>;
+  key?: string; // Add key as optional prop
 }
 
-const TodoItem: React.FC<TodoItemProps> = ({ todo, toggleTodo, deleteTodo }) => {
+const TodoItem = ({ todo, toggleTodo, deleteTodo }: TodoItemProps) => {
   const handleToggle = async () => {
     try {
       await toggleTodo(todo.id);

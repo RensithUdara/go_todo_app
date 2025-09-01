@@ -3,6 +3,9 @@ import * as ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+// Export FilterType for reuse
+export type FilterType = 'all' | 'active' | 'completed';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
