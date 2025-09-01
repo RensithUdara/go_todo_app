@@ -48,7 +48,7 @@ const App: React.FC = () => {
     try {
       const updatedTodo = await TodoService.toggleTodoStatus(id);
       setTodos(
-        todos.map(todo => (todo.id === id ? updatedTodo : todo))
+        todos.map((todo: Todo) => (todo.id === id ? updatedTodo : todo))
       );
     } catch (err) {
       setError('Failed to update todo. Please try again.');
@@ -60,7 +60,7 @@ const App: React.FC = () => {
   const deleteTodo = async (id: string) => {
     try {
       await TodoService.deleteTodo(id);
-      setTodos(todos.filter(todo => todo.id !== id));
+      setTodos(todos.filter((todo: Todo) => todo.id !== id));
     } catch (err) {
       setError('Failed to delete todo. Please try again.');
       console.error('Error deleting todo:', err);
