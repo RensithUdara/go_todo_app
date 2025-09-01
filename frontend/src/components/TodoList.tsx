@@ -6,9 +6,10 @@ interface TodoListProps {
   todos: Todo[];
   toggleTodo: (id: string) => Promise<void>;
   deleteTodo: (id: string) => Promise<void>;
+  updateTodo: (todo: Todo) => Promise<void>;
 }
 
-const TodoList = ({ todos, toggleTodo, deleteTodo }: TodoListProps) => {
+const TodoList = ({ todos, toggleTodo, deleteTodo, updateTodo }: TodoListProps) => {
   if (todos.length === 0) {
     return (
       <div className="todo-empty">
@@ -30,6 +31,7 @@ const TodoList = ({ todos, toggleTodo, deleteTodo }: TodoListProps) => {
           todo={todo}
           toggleTodo={toggleTodo}
           deleteTodo={deleteTodo}
+          updateTodo={updateTodo}
         />
       ))}
     </ul>
