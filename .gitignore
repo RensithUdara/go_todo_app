@@ -1,0 +1,37 @@
+# Root .gitignore
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Log files
+*.log
+logs/
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Node.js
+node_modules/
+
+# Temporary files
+tmp/
+temp/
+
+# git related
+.git-credentials
+
+# local configuration files
+*.local
