@@ -13,7 +13,7 @@ const App = () => {
   const [error, setError] = useState<string | null>(null);
 
   // Load todos from API on component mount
-  React.useEffect(() => {
+  useEffect(() => {
     const fetchTodos = async () => {
       try {
         setIsLoading(true);
