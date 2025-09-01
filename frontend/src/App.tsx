@@ -56,6 +56,19 @@ const App = () => {
     }
   };
 
+  // Update a todo
+  const updateTodo = async (todo: Todo) => {
+    try {
+      const updatedTodo = await TodoService.updateTodo(todo);
+      setTodos(
+        todos.map((t: Todo) => (t.id === todo.id ? updatedTodo : t))
+      );
+    } catch (err) {
+      setError('Failed to update todo. Please try again.');
+      console.error('Error updating todo:', err);
+    }
+  };
+
   // Delete a todo
   const deleteTodo = async (id: string) => {
     try {
@@ -116,6 +129,7 @@ const App = () => {
             todos={filteredTodos}
             toggleTodo={toggleTodo}
             deleteTodo={deleteTodo}
+            updateTodo={updateTodo}
           />
           
           {todos.length > 0 && (
