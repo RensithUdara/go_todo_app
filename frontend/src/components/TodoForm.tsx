@@ -28,7 +28,7 @@ const TodoForm = ({ addTodo }: TodoFormProps) => {
         type="text"
         className="todo-input"
         value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={(e: any) => setTitle(e.target.value)}
         placeholder="What needs to be done?"
         autoFocus
       />
