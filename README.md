@@ -56,19 +56,26 @@ The application will start on http://localhost:3000
 
 If you encounter TypeScript errors related to React imports:
 
-1. Make sure you're using the correct version of React types:
+1. We've configured the project to use React 16 with TypeScript, which requires special handling:
    ```
-   npm install @types/react@17.0.39 @types/react-dom@17.0.17 react@17.0.2 react-dom@17.0.2
-   ```
-
-2. Use the proper React import syntax:
-   ```typescript
-   import * as React from 'react';
+   npm install @types/react@16.14.45 @types/react-dom@16.9.19 react@16.14.0 react-dom@16.14.0
    ```
 
-3. Access React hooks with the React namespace:
+2. The project includes a custom React adapter to simplify usage:
    ```typescript
-   const [state, setState] = React.useState(initialValue);
+   import React, { useState, useEffect } from './react-adapter';
+   ```
+
+3. We've also included declaration files in the `/src/types` directory that help TypeScript understand React components correctly.
+
+4. If you encounter issues with JSX types, check that your tsconfig.json has:
+   ```json
+   {
+     "compilerOptions": {
+       "jsx": "react",
+       "noImplicitAny": false
+     }
+   }
    ```
 
 ## Development
