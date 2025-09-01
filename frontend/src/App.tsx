@@ -8,10 +8,10 @@ import TodoFilters from './components/TodoFilters';
 type FilterType = 'all' | 'active' | 'completed';
 
 const App: React.FC = () => {
-  const [todos, setTodos] = React.useState([]) as [Todo[], React.Dispatch<React.SetStateAction<Todo[]>>];
-  const [filter, setFilter] = React.useState('all') as [FilterType, React.Dispatch<React.SetStateAction<FilterType>>];
-  const [isLoading, setIsLoading] = React.useState(true) as [boolean, React.Dispatch<React.SetStateAction<boolean>>];
-  const [error, setError] = React.useState(null) as [string | null, React.Dispatch<React.SetStateAction<string | null>>];
+  const [todos, setTodos] = React.useState<Todo[]>([]);
+  const [filter, setFilter] = React.useState<FilterType>('all');
+  const [isLoading, setIsLoading] = React.useState<boolean>(true);
+  const [error, setError] = React.useState<string | null>(null);
 
   // Load todos from API on component mount
   React.useEffect(() => {
