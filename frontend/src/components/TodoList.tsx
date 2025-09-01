@@ -8,7 +8,7 @@ interface TodoListProps {
   deleteTodo: (id: string) => Promise<void>;
 }
 
-const TodoList: React.FC<TodoListProps> = ({ todos, toggleTodo, deleteTodo }) => {
+const TodoList = ({ todos, toggleTodo, deleteTodo }: TodoListProps) => {
   if (todos.length === 0) {
     return <div className="todo-empty">No todos yet. Add one above!</div>;
   }
