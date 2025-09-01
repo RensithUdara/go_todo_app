@@ -4,6 +4,7 @@ import { TodoService } from './services/TodoService';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import TodoFilters from './components/TodoFilters';
+import AppLogo from './components/AppLogo';
 import { FilterType } from './index';
 
 const App = () => {
@@ -96,7 +97,7 @@ const App = () => {
 
   return (
     <div className="todo-app">
-      <h1 className="app-title">Todo App</h1>
+      <h1 className="app-title">Task Master</h1>
       <TodoForm addTodo={addTodo} />
       
       {error && <div className="todo-error">{error}</div>}
