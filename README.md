@@ -52,6 +52,25 @@ npm start
 
 The application will start on http://localhost:3000
 
+### Troubleshooting TypeScript Errors
+
+If you encounter TypeScript errors related to React imports:
+
+1. Make sure you're using the correct version of React types:
+   ```
+   npm install @types/react@17.0.39 @types/react-dom@17.0.17 react@17.0.2 react-dom@17.0.2
+   ```
+
+2. Use the proper React import syntax:
+   ```typescript
+   import * as React from 'react';
+   ```
+
+3. Access React hooks with the React namespace:
+   ```typescript
+   const [state, setState] = React.useState(initialValue);
+   ```
+
 ## Development
 
 ### Prerequisites
@@ -59,6 +78,16 @@ The application will start on http://localhost:3000
 - Go 1.18 or higher
 - Node.js 14 or higher
 - npm 6 or higher
+
+### Quick Start
+
+You can start both the backend and frontend with a single command:
+
+```
+.\start.bat
+```
+
+This will start the Go backend on port 8080 and the React frontend on port 3000.
 
 ## License
 

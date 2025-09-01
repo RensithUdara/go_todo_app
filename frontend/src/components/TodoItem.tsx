@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Todo } from '../types/Todo';
 import { FaTrash } from 'react-icons/fa';
 
