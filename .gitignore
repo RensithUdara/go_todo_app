@@ -2,13 +2,10 @@
 
 # IDE specific files
 .idea/
-.vscode/
 *.swp
 *.swo
 
 # Environment variables
-.env
-.env.*
 !.env.example
 
 # Log files
@@ -35,3 +32,4 @@ temp/
 
 # local configuration files
 *.local
+config.bat

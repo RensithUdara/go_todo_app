@@ -245,12 +245,63 @@ The application is fully responsive and adapts to different screen sizes:
 - [ ] Offline support with local storage
 - [ ] Progressive Web App (PWA) features
 
+## Contributing
+
+Contributions are welcome! Here's how you can contribute to this project:
+
+1. **Fork the repository**
+2. **Create a feature branch**:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make your changes** and commit them:
+   ```bash
+   git commit -m "Add some feature"
+   ```
+4. **Push to your branch**:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. **Create a Pull Request**
+
+### Contribution Guidelines
+
+- Follow the existing code style and formatting
+- Write tests for new features when applicable
+- Ensure your code passes all existing tests
+- Update documentation for any new features
+- Create clear commit messages that explain your changes
+
 ## License
 
-MIT License
+### MIT License
+
+Copyright (c) 2025 Rensith Udara
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ## Author
 
-RensithUdara
+### Rensith Udara
 
-MIT
+- GitHub: [RensithUdara](https://github.com/RensithUdara)
+- Project Repository: [go_todo_app](https://github.com/RensithUdara/go_todo_app)
+
+This project was developed as a demonstration of full-stack development using Go and React. 
+Feel free to use it as a template for your own projects or contribute to its development.
