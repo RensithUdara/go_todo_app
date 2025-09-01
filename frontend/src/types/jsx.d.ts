@@ -12,6 +12,7 @@ declare global {
       li: React.DetailedHTMLProps<React.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>;
       ul: React.DetailedHTMLProps<React.HTMLAttributes<HTMLUListElement>, HTMLUListElement>;
       small: React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
+      p: React.DetailedHTMLProps<React.HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>;
       svg: React.SVGProps<SVGSVGElement>;
       line: React.SVGProps<SVGLineElement>;
       circle: React.SVGProps<SVGCircleElement>;
