@@ -2,12 +2,11 @@
 
 import * as React from 'react';
 
-// Re-export all of React's public API
-export * from 'react';
-
 // Extend React with custom hooks
-export const useState: typeof React.useState = React.useState;
-export const useEffect: typeof React.useEffect = React.useEffect;
+export const useState = React.useState;
+export const useEffect = React.useEffect;
+export const createElement = React.createElement;
+export const Fragment = React.Fragment;
 
 // Default export for React
 export default React;
