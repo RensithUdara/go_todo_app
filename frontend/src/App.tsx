@@ -70,14 +70,14 @@ const App: React.FC = () => {
   // Clear all completed todos
   const clearCompleted = async () => {
     try {
-      const completedTodos = todos.filter(todo => todo.completed);
+      const completedTodos = todos.filter((todo: Todo) => todo.completed);
       
       // Delete all completed todos in parallel
       await Promise.all(
-        completedTodos.map(todo => TodoService.deleteTodo(todo.id))
+        completedTodos.map((todo: Todo) => TodoService.deleteTodo(todo.id))
       );
       
-      setTodos(todos.filter(todo => !todo.completed));
+      setTodos(todos.filter((todo: Todo) => !todo.completed));
     } catch (err) {
       setError('Failed to clear completed todos. Please try again.');
       console.error('Error clearing completed todos:', err);
@@ -85,14 +85,14 @@ const App: React.FC = () => {
   };
 
   // Filter todos based on current filter
-  const filteredTodos = todos.filter(todo => {
+  const filteredTodos = todos.filter((todo: Todo) => {
     if (filter === 'active') return !todo.completed;
     if (filter === 'completed') return todo.completed;
     return true; // 'all' filter
   });
 
   // Count active and completed todos
-  const activeCount = todos.filter(todo => !todo.completed).length;
+  const activeCount = todos.filter((todo: Todo) => !todo.completed).length;
   const completedCount = todos.length - activeCount;
 
   return (
