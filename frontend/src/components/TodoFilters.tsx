@@ -10,13 +10,13 @@ interface TodoFiltersProps {
   clearCompleted: () => Promise<void>;
 }
 
-const TodoFilters: React.FC<TodoFiltersProps> = ({
+const TodoFilters = ({
   currentFilter,
   setFilter,
   activeCount,
   completedCount,
   clearCompleted
-}) => {
+}: TodoFiltersProps) => {
   return (
     <>
       <div className="todo-stats">
