@@ -102,7 +102,10 @@ const App = () => {
       {error && <div className="todo-error">{error}</div>}
       
       {isLoading ? (
-        <div className="todo-loading">Loading todos...</div>
+        <div className="todo-loading">
+          <div className="loading-spinner"></div>
+          Loading todos...
+        </div>
       ) : (
         <>
           <TodoList
