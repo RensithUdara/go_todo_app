@@ -2,7 +2,7 @@
 
 A modern, full-featured Todo application with a Golang backend API and React frontend with TypeScript.
 
-![Todo Application Screenshot](screenshots/app_screenshot.png)
+![Todo Application Screenshot](screenshots/image.png)
 
 ## Features
 
