@@ -420,6 +420,166 @@ code {
   }
 }
 
+/* Edit Todo Styling */
+.todo-edit-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.todo-edit-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 2px solid var(--primary-light);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color var(--transition-speed);
+  margin-right: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.1);
+}
+
+.todo-edit-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.15);
+}
+
+.todo-edit-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-action-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  transition: all var(--transition-speed);
+}
+
+.edit-action-button.save {
+  color: var(--success-color);
+}
+
+.edit-action-button.save:hover {
+  background-color: rgba(0, 184, 148, 0.1);
+  transform: scale(1.1);
+}
+
+.edit-action-button.cancel {
+  color: var(--error-color);
+}
+
+.edit-action-button.cancel:hover {
+  background-color: rgba(255, 118, 117, 0.1);
+  transform: scale(1.1);
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button {
+  background: transparent;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all var(--transition-speed);
+}
+
+.edit-button:hover {
+  background-color: rgba(108, 92, 231, 0.1);
+  transform: scale(1.1);
+}
+
+/* Confirmation Dialog */
+.confirm-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.confirm-dialog {
+  background-color: var(--background-light);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: var(--box-shadow);
+  animation: scaleIn 0.3s ease-out;
+}
+
+.confirm-dialog-message {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.confirm-dialog-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.confirm-dialog-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+.confirm-dialog-button.cancel {
+  background-color: var(--background-dark);
+  color: var(--text-secondary);
+}
+
+.confirm-dialog-button.cancel:hover {
+  background-color: #c7d0d5;
+}
+
+.confirm-dialog-button.confirm {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.confirm-dialog-button.confirm:hover {
+  background-color: #e74c3c;
+  box-shadow: 0 4px 8px rgba(255, 118, 117, 0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
 @media (max-width: 640px) {
   .todo-app {
     margin: 0;
@@ -435,5 +595,20 @@ code {
   .add-button {
     margin-left: 0;
     margin-top: 10px;
+  }
+  
+  .todo-edit-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .todo-edit-input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  
+  .todo-edit-actions {
+    align-self: flex-end;
   }
 }
