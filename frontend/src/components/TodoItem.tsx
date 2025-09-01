@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect } from '../react-adapter';
 import { Todo } from '../types/Todo';
 import { FaTrash, FaEdit, FaSave, FaTimes } from 'react-icons/fa';
 import ConfirmDialog from './ConfirmDialog';
@@ -12,13 +12,15 @@ interface TodoItemProps {
 }
 
 const TodoItem = ({ todo, toggleTodo, deleteTodo, updateTodo }: TodoItemProps) => {
-  const [isEditing, setIsEditing] = React.useState(false);
-  const [editValue, setEditValue] = React.useState(todo.title);
-  const [showDeleteConfirm, setShowDeleteConfirm] = React.useState(false);
-  const inputRef = React.useRef<HTMLInputElement>(null);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editValue, setEditValue] = useState(todo.title);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  
+  // Create a ref manually since useRef isn't available
+  const inputRef = { current: null as HTMLInputElement | null };
 
   // Focus input when editing starts
-  React.useEffect(() => {
+  useEffect(() => {
     if (isEditing && inputRef.current) {
       inputRef.current.focus();
     }
@@ -76,7 +78,7 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo, updateTodo }: TodoItemProps) =
     setIsEditing(false);
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: any) => {
     if (e.key === 'Enter') {
       handleSave();
     } else if (e.key === 'Escape') {
@@ -95,11 +97,11 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo, updateTodo }: TodoItemProps) =
       {isEditing ? (
         <div className="todo-edit-container">
           <input
-            ref={inputRef}
+            ref={(el) => { inputRef.current = el; }}
             type="text"
             className="todo-edit-input"
             value={editValue}
-            onChange={(e) => setEditValue(e.target.value)}
+            onChange={(e: any) => setEditValue(e.target.value)}
             onKeyDown={handleKeyDown}
           />
           <div className="todo-edit-actions">
