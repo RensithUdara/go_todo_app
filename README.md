@@ -79,6 +79,16 @@ If you encounter TypeScript errors related to React imports:
 - Node.js 14 or higher
 - npm 6 or higher
 
+### Quick Start
+
+You can start both the backend and frontend with a single command:
+
+```
+.\start.bat
+```
+
+This will start the Go backend on port 8080 and the React frontend on port 3000.
+
 ## License
 
 MIT
