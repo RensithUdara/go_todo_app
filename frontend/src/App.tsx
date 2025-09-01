@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect } from './react-adapter';
 import { Todo } from './types/Todo';
 import { TodoService } from './services/TodoService';
 import TodoForm from './components/TodoForm';
