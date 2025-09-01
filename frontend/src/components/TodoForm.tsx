@@ -4,7 +4,7 @@ interface TodoFormProps {
   addTodo: (title: string) => Promise<void>;
 }
 
-const TodoForm: React.FC<TodoFormProps> = ({ addTodo }) => {
+const TodoForm = ({ addTodo }: TodoFormProps) => {
   const [title, setTitle] = React.useState('');
 
     const handleSubmit = async (e: any) => {
@@ -28,7 +28,7 @@ const TodoForm: React.FC<TodoFormProps> = ({ addTodo }) => {
         type="text"
         className="todo-input"
         value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={(e: any) => setTitle(e.target.value)}
         placeholder="What needs to be done?"
         autoFocus
       />
