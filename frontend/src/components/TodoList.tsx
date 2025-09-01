@@ -10,7 +10,16 @@ interface TodoListProps {
 
 const TodoList = ({ todos, toggleTodo, deleteTodo }: TodoListProps) => {
   if (todos.length === 0) {
-    return <div className="todo-empty">No todos yet. Add one above!</div>;
+    return (
+      <div className="todo-empty">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M12 8v4"></path>
+          <path d="M12 16h.01"></path>
+        </svg>
+        <p>No tasks yet. Add one above!</p>
+      </div>
+    );
   }
 
   return (
