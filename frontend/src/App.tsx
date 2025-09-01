@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect } from './react-adapter';
 import { Todo } from './types/Todo';
 import { TodoService } from './services/TodoService';
 import TodoForm from './components/TodoForm';
@@ -7,10 +7,10 @@ import TodoFilters from './components/TodoFilters';
 import { FilterType } from './index';
 
 const App = () => {
-  const [todos, setTodos] = React.useState<Todo[]>([]);
-  const [filter, setFilter] = React.useState<FilterType>('all');
-  const [isLoading, setIsLoading] = React.useState<boolean>(true);
-  const [error, setError] = React.useState<string | null>(null);
+  const [todos, setTodos] = useState<Todo[]>([]);
+  const [filter, setFilter] = useState<FilterType>('all');
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   // Load todos from API on component mount
   React.useEffect(() => {
