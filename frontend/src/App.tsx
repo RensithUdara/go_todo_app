@@ -97,7 +97,10 @@ const App = () => {
 
   return (
     <div className="todo-app">
-      <h1 className="app-title">Task Master</h1>
+      <div className="app-header">
+        <AppLogo />
+        <h1 className="app-title">Task Master</h1>
+      </div>
       <TodoForm addTodo={addTodo} />
       
       {error && <div className="todo-error">{error}</div>}
