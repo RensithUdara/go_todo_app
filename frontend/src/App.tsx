@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
 import { Todo } from './types/Todo';
 import { TodoService } from './services/TodoService';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import TodoFilters from './components/TodoFilters';
+import { FilterType } from './index';
 
-type FilterType = 'all' | 'active' | 'completed';
-
-const App: React.FC = () => {
+const App = () => {
   const [todos, setTodos] = React.useState<Todo[]>([]);
   const [filter, setFilter] = React.useState<FilterType>('all');
   const [isLoading, setIsLoading] = React.useState<boolean>(true);
