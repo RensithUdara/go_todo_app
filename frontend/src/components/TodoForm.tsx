@@ -4,7 +4,7 @@ interface TodoFormProps {
   addTodo: (title: string) => Promise<void>;
 }
 
-const TodoForm: React.FC<TodoFormProps> = ({ addTodo }) => {
+const TodoForm = ({ addTodo }: TodoFormProps) => {
   const [title, setTitle] = React.useState('');
 
     const handleSubmit = async (e: any) => {
