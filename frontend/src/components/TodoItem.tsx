@@ -36,8 +36,9 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo }: TodoItemProps) => {
       />
       <span className={`todo-text ${todo.completed ? 'completed' : ''}`}>
         {todo.title}
+        <small className="todo-date">{new Date(todo.created_at).toLocaleDateString()}</small>
       </span>
-      <button className="delete-button" onClick={handleDelete}>
+      <button className="delete-button" onClick={handleDelete} title="Delete todo">
         <FaTrash />
       </button>
     </li>
