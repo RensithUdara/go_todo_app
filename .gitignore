@@ -32,4 +32,6 @@ temp/
 
 # local configuration files
 *.local
-config.bat
+.vscode/
+.env
+.env.*
