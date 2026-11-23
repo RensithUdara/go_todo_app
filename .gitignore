@@ -32,4 +32,7 @@ temp/
 
 # local configuration files
 *.local
-config.bat
+.env
+.env.*
+.env.local
+.env.production
